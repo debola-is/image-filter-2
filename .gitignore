@@ -23,6 +23,8 @@ www/
 node_modules/
 tmp/
 temp/
+former_json_files/
+deployment_screenshots/
 platforms/
 plugins/
 plugins/android.json
