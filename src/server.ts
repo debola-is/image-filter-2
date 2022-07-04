@@ -39,10 +39,13 @@ import { stringify } from 'querystring';
       
       res.status(200).sendFile(filtered_imagePath)
       console.log(filtered_imagePath)
-      let fileDirectory = filtered_imagePath.split("src")
-      let local_location = fileDirectory[1].replace("\\", "/")
+   //Deletes image from local directory after 5 seconds
+      setTimeout(async () => {
+        await deleteLocalFiles([filtered_imagePath])
+        
+      }, 5000);
 
-      await deleteLocalFiles([filtered_imagePath])
+      
      
       
     }
