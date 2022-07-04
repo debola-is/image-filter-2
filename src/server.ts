@@ -35,7 +35,7 @@ import { stringify } from 'querystring';
      return res.status(401).send("Invalid image url")
     }
     else {
-      let filtered_imagePath = await filterImageFromURL(`${image_url}`)
+      let filtered_imagePath: string = await filterImageFromURL(`${image_url}`)
       
       res.status(200).sendFile(filtered_imagePath)
       console.log(filtered_imagePath)
