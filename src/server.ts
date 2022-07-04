@@ -29,7 +29,7 @@ import { stringify } from 'querystring';
   //   the filtered image file [!!TIP res.sendFile(filteredpath); might be useful]
 
   /**************************************************************************** */
-  app.get("/filteredimage/", async (req,res) => {
+  app.get("/filteredimage/", async (req: express.Request,res: express.Response) => {
     let {image_url} = req.query
     if(!image_url) {
      return res.status(401).send("Invalid image url")
