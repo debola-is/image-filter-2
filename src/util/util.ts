@@ -27,6 +27,7 @@ export async function filterImageFromURL(inputURL: string): Promise<string> {
   });
 }
 
+
 // deleteLocalFiles
 // helper function to delete files on the local disk
 // useful to cleanup after tasks
